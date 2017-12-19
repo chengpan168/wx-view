@@ -1,0 +1,6 @@
+<template name="i-toast">
+  <view class="i-toast-wrapper">
+    <view class="i-toast" wx:if="{{ toast.show }}" bindtap="clearToast">{{ toast.title }}</view>
+    <view class="mask" wx:if="{{ toast.show }}" bindtap="clearToast"></view>
+  </view>
+</template>

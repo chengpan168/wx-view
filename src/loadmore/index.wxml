@@ -1,0 +1,30 @@
+<template name="i-loadmore">
+
+  <block wx:if="{{nomore}}">
+    <view class="i-loadmore i-loadmore-nomore">
+      <view class="i-loadmore-tips">
+        <view class="i-loadmore-dot"></view>
+      </view>
+    </view>
+  </block>
+
+  <block wx:elif="{{nodata}}">
+    <view class="i-loadmore i-loadmore-nodata">
+      <view class="i-loadmore-tips">{{ noDataText || '暂无数据' }}</view>
+    </view>
+  </block>
+
+  <block wx:elif="{{loading}}">
+    <view class="i-loadmore">
+      <view class="i-loading"></view>
+      <view class="i-loadmore-tips">{{ loadingText || '加载中...'}}</view>
+    </view>
+  </block>
+
+  <block wx:elif="{{pullUp}}">
+    <view class="i-loadmore">
+      <view class="i-pullup-tips">{{ loadingText || '上拉加载更多'}}</view>
+    </view>
+  </block>
+
+</template>

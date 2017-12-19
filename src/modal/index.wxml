@@ -1,0 +1,26 @@
+<template name="i-modal">
+  <view class="modal-wrapper" wx:if="{{modal.show}}">
+    <view class="modal">
+      <view class="title">
+        <text>{{modal.title}}</text>
+      </view>
+      <view class="content" wx:if="{{modal.content}}">
+        {{modal.content}}
+      </view>
+      <view class="contents" wx:else>
+        <view class="item" wx:for="{{modal.contents}}">
+          <text class="name">{{item.title}}</text>
+          <text class="text">{{item.content}}</text>
+        </view>
+      </view>
+      <view class="btn" wx:if="{{modal.showCancel}}">
+        <button plain="true" class="cancel" data-id="{{id}}" bindtap="onModalCancel">{{cancelName || '取消'}}</button>
+        <button plain="true" class="ok" data-id="{{id}}" bindtap="onModalOk">{{okName || '确定'}}</button>
+      </view>
+      <view class="btn" wx:else>
+        <button plain="true" class="close" data-id="{{id}}" bindtap="onModalOk">{{okName || '知道啦'}}</button>
+      </view>
+    </view>
+    <view class="mask"></view>
+  </view>
+</template>

@@ -1,0 +1,91 @@
+.modal-wrapper {
+  height:  100%;
+
+  .modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-left: -270rpx;
+    margin-top: -360rpx;
+    z-index:  11;
+    width: 540rpx;
+    border-radius: 8rpx;
+    overflow: hidden;
+
+    .title {
+      text-align: center;
+      display: block;
+      font-size: 32rpx;
+      padding: 30rpx 30rpx 20rpx 30rpx;
+      background: #ffffff;
+      border-radius: 8rpx 8rpx 0  0;
+    }
+    // 正常文本内容
+    .content {
+      background: #ffffff;
+      padding: 0 40rpx 30rpx 40rpx;
+      font-size: 24rpx;
+      color: #FF3333;
+      text-align: center;
+    }
+    // 多条显示
+    .contents {
+      background: #ffffff;
+      .item {
+        text-align: left;
+        border-top: 1rpx solid #E6E6E6;
+        padding: 30rpx;
+
+        .name {
+          display: block;
+          font-size:30rpx;
+          color:rgba(0,0,0,1);
+        }
+        .text {
+          font-size:24rpx;
+          color:rgba(191,191,191,1);
+        }
+      }
+    }
+
+    .btn {
+      border-top: 1rpx solid #e6e6e6;
+      background: #ffffff;
+
+      button {
+        display: inline-block;
+        width: 50%;
+        height: 98rpx;
+        line-height: 98rpx;
+        font-size: 32rpx;
+        color: #000;
+        border-radius: 0;
+        border: none;
+        outline: none;
+      }
+      .cancel {
+        border-right: 1rpx solid #e6e6e6;
+      }
+      .ok {
+        color: #00C200;
+      }
+      .close {
+        width: 100%;
+        color: #00C200;
+      }
+    }
+  }
+
+  .mask {
+    display: block;
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width:  750rpx;
+    background: #000000;
+    opacity: 0.6;
+    transition: opacity 0.5s;
+  }
+}
